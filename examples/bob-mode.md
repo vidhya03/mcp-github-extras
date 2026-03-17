@@ -10,12 +10,12 @@ Register both the official server and this one in your project-level `.mcp.json`
     "github": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": { "GITHUB_TOKEN": "${GITHUB_TOKEN}" }
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}" }
     },
     "github-extra": {
       "command": "node",
       "args": ["./mcp-github-extras/index.js"],
-      "env": { "GITHUB_TOKEN": "${GITHUB_TOKEN}" }
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}" }
     },
     "jira": { "...": "..." },
     "cve":  { "...": "..." }

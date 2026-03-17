@@ -14,8 +14,8 @@ describe('MCP GitHub Extras', () => {
   });
 
   it('should validate environment variables', () => {
-    // Test that GITHUB_TOKEN is expected
-    const hasToken = process.env.GITHUB_TOKEN !== undefined;
+    // Test that GITHUB_PERSONAL_ACCESS_TOKEN is expected
+    const hasToken = process.env.GITHUB_PERSONAL_ACCESS_TOKEN !== undefined;
     // We don't fail if token is missing in test environment
     assert.ok(true, 'Environment variable check passed');
   });

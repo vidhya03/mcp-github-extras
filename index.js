@@ -1,9 +1,10 @@
+#!/usr/bin/env node
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import fetch from "node-fetch";
 
-const GH_TOKEN = process.env.GITHUB_TOKEN;
+const GH_TOKEN = process.env.GITHUB_PERSONAL_ACCESS_TOKEN;
 const BASE = "https://api.github.com";
 
 const headers = {

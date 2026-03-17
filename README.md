@@ -20,7 +20,7 @@ npm install -g mcp-github-extras
       "command": "npx",
       "args": ["mcp-github-extras"],
       "env": {
-        "GITHUB_TOKEN": "ghp_your_token_here"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_your_token_here"
       }
     }
   }
@@ -75,7 +75,7 @@ git clone https://github.com/vidhya03/mcp-github-extras
 cd mcp-github-extras
 npm install
 cp .env.example .env
-# edit .env and add your GITHUB_TOKEN
+# edit .env and add your GITHUB_PERSONAL_ACCESS_TOKEN
 ```
 
 ## Configuration
@@ -90,7 +90,7 @@ cp .env.example .env
       "command": "npx",
       "args": ["mcp-github-extras"],
       "env": {
-        "GITHUB_TOKEN": "ghp_your_token_here"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_your_token_here"
       }
     }
   }
@@ -105,7 +105,7 @@ cp .env.example .env
       "command": "node",
       "args": ["/absolute/path/to/mcp-github-extras/index.js"],
       "env": {
-        "GITHUB_TOKEN": "ghp_your_token_here"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_your_token_here"
       }
     }
   }
@@ -122,7 +122,7 @@ cp .env.example .env
       "command": "npx",
       "args": ["mcp-github-extras"],
       "env": {
-        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
       }
     }
   }
@@ -137,7 +137,7 @@ cp .env.example .env
       "command": "node",
       "args": ["./mcp-github-extras/index.js"],
       "env": {
-        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
       }
     }
   }
@@ -220,7 +220,7 @@ These tools work alongside the official `github-mcp` server to provide complete 
 ## Running locally
 
 ```bash
-GITHUB_TOKEN=ghp_xxx node index.js
+GITHUB_PERSONAL_ACCESS_TOKEN=ghp_xxx node index.js
 ```
 
 You should see:
