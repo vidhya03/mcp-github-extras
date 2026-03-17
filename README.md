@@ -165,8 +165,8 @@ These tools work alongside the official `github-mcp` server to provide complete 
 
 ```json
 {
-  "owner":    "ibm-webmethods",
-  "repo":     "stig-hardened-base-images",
+  "owner":    "vidhya03",
+  "repo":     "mcp-github-extras",
   "per_page": 10
 }
 ```
