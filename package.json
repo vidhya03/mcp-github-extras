@@ -1,5 +1,5 @@
 {
-  "name": "@vidhya03/mcp-github-extras",
+  "name": "mcp-github-extras",
   "version": "1.0.0",
   "type": "module",
   "description": "Extended GitHub tools for MCP — PR reviewers, assignees, labels, and tags",
@@ -11,9 +11,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vidhya03/mcp-github-extras.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "latest",
