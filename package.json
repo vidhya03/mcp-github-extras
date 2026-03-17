@@ -1,6 +1,6 @@
 {
   "name": "mcp-github-extras",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Extended GitHub tools for MCP — PR reviewers, assignees, labels, and tags",
   "main": "index.js",
