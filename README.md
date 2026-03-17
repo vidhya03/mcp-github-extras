@@ -1,7 +1,33 @@
 # mcp-github-extras
 
+[![npm version](https://img.shields.io/npm/v/mcp-github-extras.svg)](https://www.npmjs.com/package/mcp-github-extras)
+[![CI](https://github.com/vidhya03/mcp-github-extras/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/vidhya03/mcp-github-extras/actions/workflows/npm-publish.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 > Extended GitHub tools for [Model Context Protocol (MCP)](https://modelcontextprotocol.io) —
 > filling the gaps left by the official `github-mcp` server.
+
+## Quick Start
+
+```bash
+# Install globally
+npm install -g mcp-github-extras
+
+# Configure in Claude Desktop (~/.claude/claude_desktop_config.json)
+{
+  "mcpServers": {
+    "github-extra": {
+      "command": "npx",
+      "args": ["mcp-github-extras"],
+      "env": {
+        "GITHUB_TOKEN": "ghp_your_token_here"
+      }
+    }
+  }
+}
+
+# Restart Claude Desktop and start using the tools!
+```
 
 ## Why this exists
 
@@ -36,6 +62,14 @@ several PR workflow tools essential for automation pipelines:
 
 ## Installation
 
+### Option 1: Install from npm (Recommended)
+
+```bash
+npm install -g mcp-github-extras
+```
+
+### Option 2: Install from source
+
 ```bash
 git clone https://github.com/vidhya03/mcp-github-extras
 cd mcp-github-extras
@@ -48,6 +82,22 @@ cp .env.example .env
 
 ### Global — `~/.claude/claude_desktop_config.json`
 
+**Using npm package:**
+```json
+{
+  "mcpServers": {
+    "github-extra": {
+      "command": "npx",
+      "args": ["mcp-github-extras"],
+      "env": {
+        "GITHUB_TOKEN": "ghp_your_token_here"
+      }
+    }
+  }
+}
+```
+
+**Using source installation:**
 ```json
 {
   "mcpServers": {
@@ -64,6 +114,22 @@ cp .env.example .env
 
 ### Project level — `.mcp.json`
 
+**Using npm package:**
+```json
+{
+  "mcpServers": {
+    "github-extra": {
+      "command": "npx",
+      "args": ["mcp-github-extras"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      }
+    }
+  }
+}
+```
+
+**Using source installation:**
 ```json
 {
   "mcpServers": {
@@ -80,6 +146,18 @@ cp .env.example .env
 
 > Keep the official `github-mcp` registered separately under the name `github`.
 > Both servers can run side by side without conflict as long as they have distinct names.
+
+## Usage
+
+Once configured, the tools are available to any MCP client (Claude Desktop, Cline, etc.). The server exposes 5 tools that complement the official GitHub MCP server:
+
+- **list_tags** - Get repository tags for version tracking
+- **add_pr_reviewers** - Request code reviews on pull requests
+- **add_pr_assignees** - Assign pull requests to team members
+- **set_pr_labels** - Organize PRs with labels
+- **create_label** - Create repository labels programmatically
+
+These tools work alongside the official `github-mcp` server to provide complete GitHub workflow automation through MCP.
 
 ## Tool reference
 
