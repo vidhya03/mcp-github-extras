@@ -1,0 +1,26 @@
+{
+  "name": "mcp-github-extras",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Extended GitHub tools for MCP — PR reviewers, assignees, labels, and tags",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "node-fetch": "^3.3.2",
+    "zod": "^3.22.4"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "github",
+    "automation",
+    "devops",
+    "pull-request",
+    "cve-remediation"
+  ],
+  "author": "Vidhya (https://github.com/vidhya03)",
+  "license": "MIT"
+}
